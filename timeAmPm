@@ -1,0 +1,36 @@
+function largestAdjacent(arr){
+  var largestProduct = arr[0] * arr[1]
+  for (var i=1; i<arr.length-i; i++){
+    if(arr[i] + arr[i+1]>largestProduct){
+      largestProduct = arr[i]*arr[i+1];
+    }
+  }
+  return largestProduct;
+}
+
+
+
+function date(time){
+  if(time.charAt(8)=="A"){
+    if(time.substring(0,2)=="12"){
+     return time.replace('12','00').substring(0,8);
+    }
+  }
+  else{
+    return time.substring(0,8)
+  }
+    if(time.charAt(8)=="P"){
+     if(time.substring(0,2)=="12"){
+     return time.substring(0,8)
+    }
+    }
+  else{
+    return (parseInt(time.substring(0,2))+12)+time.substring(2,8);
+ }
+    
+  }
+console.log(date("12:45:05AM"));
+console.log(date("12:45:05PM"));
+console.log(date("07:45:05AM"));
+console.log(date("01:45:05PM"));
+console.log(date("01:45:05PM"));
