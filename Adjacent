@@ -7,4 +7,5 @@ function largestAdjacent(arr){
   }
   return largestProduct;
 }
-console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
+
+console.log(largestAdjacent([3,6,-2,-5,7,3]));
